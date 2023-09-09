@@ -1,6 +1,6 @@
-const repositoryName: string | undefined = Deno.env.get("REPOSITORY_NAME");
-const version: string | undefined = Deno.env.get("VERSION");
-const vpmJsonPath: string | undefined = Deno.env.get("VPM_JSON_PATH");
+const repositoryName: string | undefined = Deno.env.get("REPOSITORY_NAME") ?? "KineLVideoPlayer"
+const version: string | undefined = Deno.env.get("VERSION") ?? "2.5.0"
+const vpmJsonPath: string | undefined = Deno.env.get("VPM_JSON_PATH") ?? "../vpm.json"
 
 const packageUrl = `https://github.com/niwaniwa/${repositoryName}/releases/download/${version}/package.json`
 
@@ -20,13 +20,10 @@ parentJson.packages ??= {};
 parentJson.packages[packageJson.name] ??= {versions: {}};
 parentJson.packages[packageJson.name].versions[packageJson.version] = packageJson
 
-Deno.writeTextFileSync(`${repositoryName}`, JSON.stringify(parentJson, null, 4) + "\n")
+Deno.writeTextFileSync(`${vpmJsonPath}`, JSON.stringify(parentJson, null, 4) + "\n")
 
-console.log(JSON.parse(Deno.readTextFileSync(`${vpmJsonPath}`)))
-
-// run git commands
+// // run git commands
 const decoder = new TextDecoder();
 await new Deno.Command("git", { args: ["add", `${vpmJsonPath}`] }).output().then(o => console.log(`log: ${decoder.decode(o.stdout)}`))
 await new Deno.Command("git", { args: ["commit", "-m", `update package ${repositoryName} version ${version}`] }).output().then(o => console.log(`log: ${decoder.decode(o.stdout)}`))
-    
-await new Deno.Command("git", { args: ["push"] }).output().then(o => console.log(`log: ${decoder.decode(o.stdout)}`))
+// await new Deno.Command("git", { args: ["push"] }).output().then(o => console.log(`log: ${decoder.decode(o.stdout)}`))
