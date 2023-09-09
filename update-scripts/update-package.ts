@@ -6,7 +6,7 @@ const packageUrl = `https://github.com/niwaniwa/${repositoryName}/releases/downl
 
 console.log(`packageUrl: ${packageUrl}`);
 
-const parentJson = JSON.parse(Deno.readTextFileSync(`${repositoryName}`))
+const parentJson = JSON.parse(Deno.readTextFileSync(`${vpmJsonPath}`))
 
 console.log(JSON.stringify(parentJson, null, 4));
 
