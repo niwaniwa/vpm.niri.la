@@ -1,6 +1,29 @@
 {
-  "name": "ni rila",
-  "author": "ni rila",
-  "url": "http://vpm.niri.la/vpm.json",
-  "id": "la.niri.vpm"
+    "name": "ni rila",
+    "author": "ni rila",
+    "url": "http://vpm.niri.la/vpm.json",
+    "id": "la.niri.vpm",
+    "packages": {
+        "la.niri.videoplayer": {
+            "versions": {
+                "2.5.0": {
+                    "name": "la.niri.videoplayer",
+                    "displayName": "KineL Video Player",
+                    "version": "2.5.0",
+                    "description": "Video Player for VRChat",
+                    "gitDependencies": {},
+                    "vpmDependencies": {
+                        "com.vrchat.udonsharp": "1.1.9"
+                    },
+                    "legacyFolders": {},
+                    "legacyFiles": {},
+                    "unity": "2019.4",
+                    "dependencies": {
+                        "com.vrchat.worlds": "3.2.0",
+                        "com.vrchat.udonsharp": "1.1.8"
+                    }
+                }
+            }
+        }
+    }
 }
