@@ -1,3 +1,5 @@
+name: package updater
+
 on:
     workflow_dispatch:
         inputs:
