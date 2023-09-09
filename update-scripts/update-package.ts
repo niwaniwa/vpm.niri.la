@@ -22,6 +22,8 @@ parentJson.packages[packageJson.name].versions[packageJson.version] = packageJso
 
 Deno.writeTextFileSync(`${repositoryName}`, JSON.stringify(parentJson, null, 4) + "\n")
 
+console.log(JSON.parse(Deno.readTextFileSync(`${vpmJsonPath}`)))
+
 // run git commands
 const decoder = new TextDecoder();
 await new Deno.Command("git", { args: ["add", `${vpmJsonPath}`] }).output().then(o => console.log(`log: ${decoder.decode(o.stdout)}`))
