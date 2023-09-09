@@ -1,0 +1,35 @@
+
+
+on:
+    workflow_dispatch:
+        inputs:
+            repository_name:
+                description: 'Repository name'
+                required: true
+                type: string
+            version:
+                description: 'Version'
+                required: true
+                type: string
+
+
+jobs:
+    update:
+        runs-on: ubuntu-latest
+
+        env:
+            REPOSITORY_NAME: ${{ github.event.inputs.repository_name }}
+            VERSION: ${{ github.event.inputs.version }}
+        
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            - uses: denoland/setup-deno@v1
+              with:
+                deno-version: v1.x
+
+            - name: Perform Update Process
+              run: deno run --allow-env --allow-net --allow-read --allow-write update-scripts/update-package.ts
+              env:
+                VPM_JSON_PATH: "vpm.json"
