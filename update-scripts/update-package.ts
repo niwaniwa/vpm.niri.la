@@ -30,6 +30,7 @@ while (true) {
     if (await new Deno.Command("git", { args: ["push"] }).output().then(o => o.success)) {
         break // successful
     }
+    console.log("retry push...");
     await new Promise(resolve => setTimeout(resolve, 5000));
     await new Deno.Command("git", { args: ["pull", "--rebase"]});
 }
