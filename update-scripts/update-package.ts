@@ -1,6 +1,6 @@
 const repositoryName: string | undefined = Deno.env.get("REPOSITORY_NAME");
 const version: string | undefined = Deno.env.get("VERSION");
-const vpmJsonPath: string | undefined = Deno.env.get("VPPM_JSON_PATH");
+const vpmJsonPath: string | undefined = Deno.env.get("VPM_JSON_PATH");
 
 const packageUrl = `https://github.com/niwaniwa/${repositoryName}/releases/download/${version}/package.json`
 
