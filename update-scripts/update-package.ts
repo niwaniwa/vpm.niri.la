@@ -23,7 +23,7 @@ parentJson.packages[packageJson.name].versions[packageJson.version] = packageJso
 Deno.writeTextFileSync(`${repositoryName}`, JSON.stringify(parentJson, null, 4) + "\n")
 
 // run git commands
-await new Deno.Command("git", { args: ["add", `${vpmJsonPath}`] }).output().then(o => console.log(o.stdout)).catch(console.error)
-await new Deno.Command("git", { args: ["commit", "-m", `update package ${repositoryName} version ${version}`] }).output().then(o => console.log(o.stdout)).catch(console.error)
+await new Deno.Command("git", { args: ["add", `${vpmJsonPath}`] }).output().then(o => console.log(`log: ${o.stdout}`))
+await new Deno.Command("git", { args: ["commit", "-m", `update package ${repositoryName} version ${version}`] }).output().then(o => console.log(`log: ${o.stdout}`))
     
-await new Deno.Command("git", { args: ["push"] }).output().then(o => console.log(o.stdout)).catch(console.error)
+await new Deno.Command("git", { args: ["push"] }).output().then(o => console.log(`log: ${o.stdout}`))
