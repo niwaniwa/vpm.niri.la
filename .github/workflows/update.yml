@@ -30,6 +30,6 @@ jobs:
                 deno-version: v1.x
 
             - name: Perform Update Process
-              run: deno run --allow-env --allow-net --allow-read --allow-write update-scripts/update-package.ts
+              run: deno run --allow-env --allow-net --allow-read --allow-write --allow-run update-scripts/update-package.ts
               env:
                 VPM_JSON_PATH: "vpm.json"

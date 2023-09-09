@@ -6,7 +6,7 @@ const packageUrl = `https://github.com/niwaniwa/${repositoryName}/releases/downl
 
 console.log(`packageUrl: ${packageUrl}`);
 
-const parentJson = JSON.parse(Deno.readTextFileSync(vpmJsonPath))
+const parentJson = JSON.parse(Deno.readTextFileSync(`${repositoryName}`))
 
 console.log(JSON.stringify(parentJson, null, 4));
 
@@ -22,4 +22,8 @@ parentJson.packages ??= {};
 parentJson.packages[packageJson.name] ??= {versions: {}};
 parentJson.packages[packageJson.name].versions[packageJson.version] = packageJson
 
-Deno.writeTextFileSync(vpmJsonPath, JSON.stringify(parentJson, null, 4) + "\n")
+Deno.writeTextFileSync(`${repositoryName}`, JSON.stringify(parentJson, null, 4) + "\n")
+
+await new Deno.Command("git", { args: ["add", `${repositoryName}`] })
+await new Deno.Command("git", { args: ["commit", "-m", `update package ${repositoryName} version ${version}`] })
+await new Deno.Command("git", { args: ["push"] })
