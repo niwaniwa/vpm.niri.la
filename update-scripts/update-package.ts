@@ -27,3 +27,4 @@ const decoder = new TextDecoder();
 await new Deno.Command("git", { args: ["add", `${vpmJsonPath}`] }).output().then(o => console.log(`log: ${decoder.decode(o.stdout)}`))
 await new Deno.Command("git", { args: ["commit", "-m", `update package ${repositoryName} version ${version}`] }).output().then(o => console.log(`log: ${decoder.decode(o.stdout)}`))
 await new Deno.Command("git", { args: ["push"] }).output().then(o => console.log(`log: ${decoder.decode(o.stdout)}`))
+await new Deno.Command("git", { args: ["log", "--pretty=format:\" % h % s\"", "--graph"] }).output().then(o => console.log(`log: ${decoder.decode(o.stdout)}`))
