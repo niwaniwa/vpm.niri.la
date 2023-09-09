@@ -26,5 +26,12 @@ Deno.writeTextFileSync(`${vpmJsonPath}`, JSON.stringify(parentJson, null, 4) + "
 const decoder = new TextDecoder();
 await new Deno.Command("git", { args: ["add", `${vpmJsonPath}`] }).output().then(o => console.log(`log: ${decoder.decode(o.stdout)}`))
 await new Deno.Command("git", { args: ["commit", "-m", `update package ${repositoryName} version ${version}`] }).output().then(o => console.log(`log: ${decoder.decode(o.stdout)}`))
-await new Deno.Command("git", { args: ["push"] }).output().then(o => console.log(`log: ${decoder.decode(o.stdout)}`))
+while (true) {
+    if (await new Deno.Command("git", { args: ["push"] }).output().then(o => o.success)) {
+        break // successful
+    }
+    await new Promise(resolve => setTimeout(resolve, 5000));
+    await new Deno.Command("git", { args: ["pull", "--rebase"]});
+}
+await new Promise(resolve => setTimeout(resolve, 1000));
 await new Deno.Command("git", { args: ["log", "--pretty=format:\" % h % s\"", "--graph"] }).output().then(o => console.log(`log: ${decoder.decode(o.stdout)}`))
