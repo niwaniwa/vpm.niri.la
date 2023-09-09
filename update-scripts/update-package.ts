@@ -31,7 +31,7 @@ while (true) {
     if (output.success) {
         break
     }
-    console.log(`retry push...: ${output.stderr}`);
+    console.log(`retry push...: ${decoder.decode(output.stderr) }`);
     await new Promise(resolve => setTimeout(resolve, 5000));
     await new Deno.Command("git", { args: ["pull", "--rebase"]});
 }
