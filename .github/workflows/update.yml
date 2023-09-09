@@ -1,5 +1,3 @@
-
-
 on:
     workflow_dispatch:
         inputs:
@@ -24,12 +22,14 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v3
+              
+            - uses: snow-actions/git-config-user@v1.0.0
 
             - uses: denoland/setup-deno@v1
               with:
                 deno-version: v1.x
 
-            - name: Perform Update Process
+            - name: Run update script
               run: deno run --allow-env --allow-net --allow-read --allow-write --allow-run update-scripts/update-package.ts
               env:
                 VPM_JSON_PATH: "vpm.json"
