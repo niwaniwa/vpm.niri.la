@@ -11,6 +11,19 @@ on:
                 description: 'Version'
                 required: true
                 type: string
+    workflow_call:
+        inputs:
+            repository_name:
+                description: 'Repository name'
+                required: true
+                type: string
+            version:
+                description: 'Version'
+                required: true
+                type: string
+        secrets:
+            access-token:
+                required: true
 
 
 jobs:
@@ -25,7 +38,7 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v3
               with:
-                token: ${{ secrets.TOKEN || github.token }}
+                token: ${{ secrets.access-token || github.token }}
               
             - uses: snow-actions/git-config-user@v1.0.0
 
