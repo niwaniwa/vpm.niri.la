@@ -24,6 +24,22 @@
                     }
                 }
             }
+        },
+        "la.niri.playercounter": {
+            "versions": {
+                "1.5.0": {
+                    "name": "la.niri.playercounter",
+                    "displayName": "KineL Player Counter",
+                    "version": "1.5.0",
+                    "description": "Player Counter For VRChat",
+                    "gitDependencies": {},
+                    "vpmDependencies": {
+                        "com.vrchat.udonsharp": "^1.1.8"
+                    },
+                    "legacyFolders": {},
+                    "legacyFiles": {}
+                }
+            }
         }
     }
 }
