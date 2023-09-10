@@ -6,8 +6,8 @@ draft: false
 
 ### 1. [KineL Video Player](/posts/kinelvideoplayer)
 
-VRChat向けビデオプレイヤー
+Video Player For VRChat
 
 ### 2. [KineL Player Counter](/posts/kinelplayercounter)
 
-VRChat向け人数カウンター
+Player Counter For VRChat
