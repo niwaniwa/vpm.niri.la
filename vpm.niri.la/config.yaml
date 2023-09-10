@@ -1,0 +1,161 @@
+baseURL: http://vpm.niri.la/
+languageCode: ja
+title: nirila's VPM Repository
+paginate: 5
+theme: PaperMod
+DefaultContentLanguage: ja
+
+## Check here for more configuration options:
+# https://github.com/adityatelange/hugo-PaperMod/wiki/Installation#sample-configyml
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+menu:
+  main:
+    - identifier: Top
+      name: Top
+      url: /
+      weight: 10
+    - identifier: Repos
+      name: Repos
+      url: /repos/
+      weight: 20
+    - name: vpm.json
+      url: https://vpm.niri.la/vpm.json
+
+languages:
+  ja:
+    languageName: Japanese
+    languageAltTitle: 日本語
+    weight: 10
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series  
+    profileMode:
+      enabled: true
+      # title: "<Title>" # optional default will be site title
+      subtitle: VRChatパッケージマネージャー向けのリポジトリです
+      imageUrl: https://media.niri.la/FDGVyrxacAA_pJr.png # optional
+      # imageTitle: nirila # optional
+      # imageWidth: 120 # custom size
+      # imageHeight: 120 # custom size
+      buttons:
+        - name: VCCに追加
+          url: "vcc://vpm/addRepo?url=https://vpm.niri.la/vpm.json"
+        - name: Github
+          url: "https://github.com/niwaniwa/vpm.niri.la"
+        - name: アセットリスト
+          url: "/repos/" 
+  en:
+    languageName: English
+    weight: 20
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series  
+
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: nirila's VPM Repository
+  description: "VRChat Package Manager Repository for ni rila"
+  keywords: [VRChat, Repository, VPM, PaperMod]
+  author: ni rila
+  images: ["https://media.niri.la/Header_2023_02_small.jpg"]
+  DateFormat: "January 2, 2023"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: https://media.niri.la/FDGVyrxacAA_pJr.png
+
+  # label:
+  #   text: "Home"
+  #   icon: /apple-touch-icon.png
+  #   iconHeight: 35
+  profileMode:
+    enabled: true
+    # title: "<Title>" # optional default will be site title
+    subtitle: VRChat Package Manager Repository for ni rila
+    imageUrl: https://media.niri.la/FDGVyrxacAA_pJr.png # optional
+    # imageTitle: nirila # optional
+    # imageWidth: 120 # custom size
+    # imageHeight: 120 # custom size
+    buttons:
+      - name: Add this repository 
+        url: "vcc://vpm/addRepo?url=https://vpm.niri.la/vpm.json"
+      - name: Github
+        url: "https://github.com/niwaniwa/vpm.niri.la"
+      - name: Repository list
+        url: "/repos/" 
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+    highlight:
+        noClasses: false
+        # anchorLineNos: true
+        # codeFences: true
+        # guessSyntax: true
+        # lineNos: true
+        # style: monokai
+
+privacy:
+    vimeo:
+        disabled: false
+        simple: true
+
+    twitter:
+        disabled: false
+        enableDNT: true
+        simple: true
+
+    instagram:
+        disabled: false
+        simple: true
+
+    youtube:
+        disabled: false
+        privacyEnhanced: true
+
+services:
+    instagram:
+        disableInlineCSS: true
+    twitter:
+        disableInlineCSS: true
