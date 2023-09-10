@@ -16,4 +16,4 @@ hugo
 cd ..
 
 cp -r vpm.niri.la/public/* public
-cp vpm.json public/content/
+cp vpm.json public/vpm.json
