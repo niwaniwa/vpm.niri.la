@@ -74,7 +74,8 @@
                         "com.vrchat.udonsharp": "^1.1.8"
                     },
                     "legacyFolders": {},
-                    "legacyFiles": {}
+                    "legacyFiles": {},
+                    "url": "https://github.com/niwaniwa/KineLPlayerCounter/releases/download/1.5.0/la.niri.playercounter-1.5.0.zip"
                 }
             }
         }
