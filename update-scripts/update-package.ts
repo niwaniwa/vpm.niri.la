@@ -16,6 +16,8 @@ const packageJson = await fetch(packageUrl)
         return response.json();
     })
 
+packageJson.url = `https://github.com/niwaniwa/${repositoryName}/releases/download/${version}/${packageJson.name}-${version}.zip`
+
 parentJson.packages ??= {};
 parentJson.packages[packageJson.name] ??= {versions: {}};
 parentJson.packages[packageJson.name].versions[packageJson.version] = packageJson
