@@ -11,12 +11,12 @@ VCCにおいてはVRChat Package Managerと呼ばれる機能によって、ア�
 ## VCCへの追加方法
 https://vpm.niri.la/へアクセスし、VCCへ追加を押してください。
 
-![VCCの画面](/assets/images/add_vcc.png)
+![VCCの画面](https://raw.githubusercontent.com/niwaniwa/vpm.niri.la/main/vpm.niri.la/assets/images/add_vcc.png)
 
 押下後、VCC側で上記の画像が出現します。適時内容を読んでいただき、右下のAdd Repositoryを押してください。
 
 その後ProjectのManageページに以下のような項目が増えていると思います。
-![Manage Packages](/assets/images/add_vcc.png)
+![Manage Packages](https://raw.githubusercontent.com/niwaniwa/vpm.niri.la/main/vpm.niri.la/assets/images/project.png)
 
 右の＋ボタンを押すことで導入が完了します。
 

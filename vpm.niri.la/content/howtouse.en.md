@@ -10,13 +10,13 @@ In VCC, a function called VRChat Package Manager enables automatic updating of a
 
 ## How to add to VCC
 Go to https://vpm.niri.la/ and press Add to VCC.
-![VCCの画面](/assets/images/add_vcc.png)
+![VCCの画面](https://raw.githubusercontent.com/niwaniwa/vpm.niri.la/main/vpm.niri.la/assets/images/add_vcc.png)
 
 After pressing the button, the above image will appear on the VCC side. Please read the contents in a timely manner and press "Add Repository" in the lower right corner.
 
 After that, you will see the following items on the Manage page of the project.
 
-![Manage Packages](/assets/images/add_vcc.png)
+![Manage Packages](https://raw.githubusercontent.com/niwaniwa/vpm.niri.la/main/vpm.niri.la/assets/images/project.png)
 Press the + button on the right to complete the installation.
 
 After installation, the assets will be stored under `Packages/<asset name>/`.
