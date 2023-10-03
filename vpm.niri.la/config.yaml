@@ -57,15 +57,33 @@ languages:
           url: "https://github.com/niwaniwa/vpm.niri.la"
         - name: アセットリスト
           url: "/repos/" 
+        - name: 使い方
+          url: "/howtouse/"
   en:
-    languageName: English
+    languageName: Japanese
+    languageAltTitle: 日本語
     weight: 20
     taxonomies:
       category: categories
       tag: tags
       series: series  
-
-
+    profileMode:
+      enabled: true
+      # title: "<Title>" # optional default will be site title
+      subtitle: VRChat Package Manager Repository for ni rila
+      imageUrl: https://media.niri.la/FDGVyrxacAA_pJr.png # optional
+      # imageTitle: nirila # optional
+      # imageWidth: 120 # custom size
+      # imageHeight: 120 # custom size
+      buttons:
+        - name: Add this repository 
+          url: "vcc://vpm/addRepo?url=https://vpm.niri.la/vpm.json"
+        - name: Github
+          url: "https://github.com/niwaniwa/vpm.niri.la"
+        - name: Repository list
+          url: "/en/repos/" 
+        - name: How to use
+          url: "/en/howtouse/"
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: nirila's VPM Repository
@@ -102,21 +120,21 @@ params:
   #   text: "Home"
   #   icon: /apple-touch-icon.png
   #   iconHeight: 35
-  profileMode:
-    enabled: true
-    # title: "<Title>" # optional default will be site title
-    subtitle: VRChat Package Manager Repository for ni rila
-    imageUrl: https://media.niri.la/FDGVyrxacAA_pJr.png # optional
-    # imageTitle: nirila # optional
-    # imageWidth: 120 # custom size
-    # imageHeight: 120 # custom size
-    buttons:
-      - name: Add this repository 
-        url: "vcc://vpm/addRepo?url=https://vpm.niri.la/vpm.json"
-      - name: Github
-        url: "https://github.com/niwaniwa/vpm.niri.la"
-      - name: Repository list
-        url: "/repos/" 
+  # profileMode:
+  #   enabled: true
+  #   # title: "<Title>" # optional default will be site title
+  #   subtitle: VRChat Package Manager Repository for ni rila
+  #   imageUrl: https://media.niri.la/FDGVyrxacAA_pJr.png # optional
+  #   # imageTitle: nirila # optional
+  #   # imageWidth: 120 # custom size
+  #   # imageHeight: 120 # custom size
+  #   buttons:
+  #     - name: Add this repository 
+  #       url: "vcc://vpm/addRepo?url=https://vpm.niri.la/vpm.json"
+  #     - name: Github
+  #       url: "https://github.com/niwaniwa/vpm.niri.la"
+  #     - name: Repository list
+  #       url: "/repos/" 
 
   cover:
     hidden: true # hide everywhere but not in structured data
