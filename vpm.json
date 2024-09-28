@@ -147,6 +147,19 @@
                     "legacyFolders": {},
                     "legacyFiles": {},
                     "url": "https://github.com/niwaniwa/playercounter/releases/download/v1.5.2/la.niri.playercounter-v1.5.2.zip"
+                },
+                "1.5.3": {
+                    "name": "la.niri.playercounter",
+                    "displayName": "KineL Player Counter",
+                    "version": "1.5.3",
+                    "description": "Player Counter For VRChat",
+                    "gitDependencies": {},
+                    "vpmDependencies": {
+                        "com.vrchat.udonsharp": "^1.1.8"
+                    },
+                    "legacyFolders": {},
+                    "legacyFiles": {},
+                    "url": "https://github.com/niwaniwa/playercounter/releases/download/v1.5.3/la.niri.playercounter-v1.5.3.zip"
                 }
             }
         }
