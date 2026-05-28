@@ -377,6 +377,26 @@
                         "url": "https://niri.la/"
                     },
                     "url": "https://github.com/niwaniwa/KineLVideoPlayer/releases/download/v3.1.1-beta.1/la.niri.videoplayer-v3.1.1-beta.1.zip"
+                },
+                "3.2.0": {
+                    "name": "la.niri.videoplayer",
+                    "displayName": "KineL Video Player",
+                    "version": "3.2.0",
+                    "description": "Video Player for VRChat",
+                    "gitDependencies": {},
+                    "vpmDependencies": {
+                        "com.vrchat.udonsharp": "^1.1.9"
+                    },
+                    "legacyFolders": {
+                        "Assets\\Kinel\\VideoPlayer": "5e8ce4c8638373d4e91d5b8688c784d2"
+                    },
+                    "legacyFiles": {},
+                    "unity": "2022.3",
+                    "author": {
+                        "name": "ni rila",
+                        "url": "https://niri.la/"
+                    },
+                    "url": "https://github.com/niwaniwa/KineLVideoPlayer/releases/download/v3.2.0/la.niri.videoplayer-v3.2.0.zip"
                 }
             }
         },
