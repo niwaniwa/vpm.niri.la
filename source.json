@@ -1,14 +1,14 @@
 {
     "name": "ni rila",
     "id": "la.niri.vpm",
-    "url": "http://vpm.niri.la/index.json",
+    "url": "https://vpm.niri.la/index.json",
     "author": {
         "name": "ni rila",
         "url": "https://github.com/niwaniwa"
     },
     "description": "KineL VRChat assets repo",
     "infoLink": {
-        "url": "http://vpm.niri.la/",
+        "url": "https://vpm.niri.la/",
         "text": "View on GitHub"
     },
     "bannerUrl": "banner.png",
